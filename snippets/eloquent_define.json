@@ -1,0 +1,110 @@
+{
+    ".source.php": {
+        "New Eloquent Model": {
+            "prefix": "eloquentModel",
+            "body": "class ${1:ModelName} extends Eloquent {\n\tprotected $table = '${2:table_name}';\n\n\t$3\n}"
+        },
+        "Eloquent Model Table":{
+            "prefix": "table",
+            "body": "protected $table = '${1:table_name}';$2"
+        },
+        "Eloquent Model Hidden Attributes":{
+            "prefix": "hidden",
+            "body": "protected $hidden = array('${1:*}'$2);$3"
+        },
+        "Eloquent Model Visible Attributes":{
+            "prefix": "visible",
+            "body": "protected $visible = array('${1:attribute}'$2);$3"
+        },
+        "Eloquent Model Guarded Attributes":{
+            "prefix": "guarded",
+            "body": "protected $guarded = array('${1:*}'$2);$3"
+        },
+        "Eloquent Model Fillable Attributes":{
+            "prefix": "fillable",
+            "body": "protected $fillable = array('${1:attribute}'$2);$3"
+        },
+        "Eloquent Model Appended Attributes":{
+            "prefix": "appends",
+            "body": "protected $appends = array('${1:attribute}'$2);$3"
+        },
+        "Eloquent Model Date Formatted Attributes":{
+            "prefix": "dates",
+            "body": "protected $dates = array('${1:attribute}'$2);$3"
+        },
+        "Eloquent Model Soft Deleting":{
+            "prefix": "timestamps",
+            "body": "protected $timestamps = ${1:false};$2"
+        },
+        "Eloquent Model Timestamps":{
+            "prefix": "softDeleting",
+            "body": "use SoftDeletingTrait;$1"
+        },
+        "Eloquent Model Date Format": {
+            "prefix": "getDateFormat",
+            "body": "protected function getDateFormat(){\n\treturn '${1:U}';\n}$2"
+        },
+        "Eloquent Model Query Scope": {
+            "prefix": "queryScope",
+            "body": "public function scope${1:ScopeName}($query){\n\treturn $query->$2;\n}$3"
+        },
+        "Eloquent Model Dynamic Scope": {
+            "prefix": "dynamicScope",
+            "body": "public function scope${1:ScopeName}($query, ${2:$parameter_name}){\n\treturn $query->$3;\n}$4"
+        },
+        "Eloquent Model Date Mutator": {
+            "prefix": "getDates",
+            "body": "public function getDates(){\n\treturn array('${1:created_at}', '${2:updated_at}', '${3:deleted_at}'$4);\n}$5"
+        },
+        "Eloquent Model Accessor": {
+            "prefix": "getAttribute",
+            "body": "public function get${1:AttributeName}Attribute(${2:$value}){\n\treturn $3;\n}$4"
+        },
+        "Eloquent Model Mutator": {
+            "prefix": "setAttribute",
+            "body": "public function set${1:AttributeName}Attribute(${2:$value}){\n\t$this->attributes['${3:attribute_name}'] = $4;\n}$5"
+        },
+        "Eloquent Model Has One Relation": {
+            "prefix": "hasOne",
+            "body": "public function ${1:functionName}(){\n\treturn $this->hasOne('${2:RelatedModel}', '${3:foreign_key}', '${4:local_key}');\n}$5"
+        },
+        "Eloquent Model Belongs To Relation": {
+            "prefix": "belongsTo",
+            "body": "public function ${1:functionName}(){\n\treturn $this->belongsTo('${2:RelatedModel}', '${3:local_key}', '${4:parent_key}');\n}$5"
+        },
+        "Eloquent Model Has Many Relation": {
+            "prefix": "hasMany",
+            "body": "public function ${1:functionName}(){\n\treturn $this->hasMany('${2:RelatedModel}', '${3:foreign_key}', '${4:local_key}');\n}$5"
+        },
+        "Eloquent Model Many To Many Relation": {
+            "prefix": "belongsToMany",
+            "body": "public function ${1:functionName}(){\n\treturn $this->belongsToMany('${2:RelatedModel}', '${3:pivot_table}', '${4:foreign_key}', '${5:local_key}');\n}$6"
+        },
+        "Eloquent Model Has Many Through Relation": {
+            "prefix": "hasManyThrough",
+            "body": "public function ${1:functionName}(){\n\treturn $this->hasManyThrough('${2:RelatedModel}', '${3:ThroughModel}', '${4:foreign_key}', '${5:local_key}');\n}$6"
+        },
+        "Eloquent Model Morph To Relation": {
+            "prefix": "morphTo",
+            "body": "protected function ${1:functionName}(){\n\treturn $this->morphTo();\n}$2"
+        },
+        "Eloquent Model Morph Many Relation": {
+            "prefix": "morphMany",
+            "body": "protected function ${1:functionName}(){\n\treturn $this->morphMany('${2:RelatedModel}', '${3:MorphName}');\n}$4"
+        },
+        "Eloquent Model Morph To Many Relation": {
+            "prefix": "morphToMany",
+            "body": "protected function ${1:functionName}(){\n\treturn $this->morphToMany('${2:RelatedModel}', '${3:MorphName}');\n}$4"
+        },
+        "Eloquent Model Morphed By Many Relation": {
+            "prefix": "morphedByMany",
+            "body": "protected function ${1:functionName}(){\n\treturn $this->morphedByMany('${2:RelatedModel}', '${3:MorphName}');\n}$4"
+        }
+    },
+    ".text.html.php": {
+        "New Eloquent Model": {
+            "prefix": "eloquentModel",
+            "body": "<?php\n\nclass ${1:ModelName} extends Eloquent {\n\tprotected $table = '${2:table_name}';\n\n\t$3\n}\n\n?>"
+        }
+    }
+}

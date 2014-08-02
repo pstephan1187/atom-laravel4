@@ -1,0 +1,12 @@
+{
+  "name": "laravel4",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "repository": "https://github.com/pstephan1187/atom-laravel4",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
