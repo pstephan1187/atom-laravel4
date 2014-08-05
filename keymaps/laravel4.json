@@ -1,0 +1,5 @@
+{
+    ".editor": {
+        "cmd-alt-e": "laravel4:create-eloquent-model"
+    }
+}
